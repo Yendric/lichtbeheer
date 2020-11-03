@@ -23,7 +23,7 @@ jobs:
          npm install
          ng build --prod --base-href="/lichtbeheer/"
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v2
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: main
