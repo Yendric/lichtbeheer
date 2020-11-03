@@ -28,4 +28,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: main
         BRANCH: pages
-        FOLDER: dist/lichtbeheer
+        FOLDER: dist/licht-beheer
