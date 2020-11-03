@@ -1,0 +1,7 @@
+<p class="mat-h1">Dashboard</p>
+<p>Aantal lampen: {{lampService.lights.length}}</p>
+<p>Aantal ingeschakelde lampen: {{lampService.onLights.length}} </p>
+<button color="primary" style="margin-right:0.2rem;" mat-raised-button (click)="lampService.turnAllLights(true)">Schakel
+    alle lampen in</button>
+<button color="primary" mat-raised-button (click)="lampService.turnAllLights(false)">Schakel alle lampen
+    uit</button>

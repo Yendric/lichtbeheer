@@ -1,0 +1,16 @@
+<div *ngIf="getLight()">
+    <p class="mat-h1">Lamp beheren - {{getLight().name}}</p>
+    <p class="mat-h3">Lamp in/uitschakelen</p>
+    <button mat-raised-button style="margin-bottom:1rem;" color="primary"
+        (click)="lampService.toggleState(getLight())">{{getLight().state.on ? 'Uitschakelen' : 'Inschakelen'}}</button>
+    <p class="mat-h3">Kleur kiezen</p>
+    <mat-form-field>
+        <input name="color" matInput [ngxMatColorPicker]="picker" [formControl]="colorCtr">
+        <ngx-mat-color-toggle matSuffix [for]="picker"></ngx-mat-color-toggle>
+        <ngx-mat-color-picker #picker [color]="color"></ngx-mat-color-picker>
+    </mat-form-field>
+    <p class="mat-h3">Helderheid kiezen</p>
+    <mat-slider color="primary" (change)="onSliderChange($event)" min="0" max="254" step="1"
+        value="{{getLight().state.bri}}">
+    </mat-slider>
+</div>

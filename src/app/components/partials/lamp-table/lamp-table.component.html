@@ -1,0 +1,23 @@
+<mat-table [dataSource]="lampService.lights">
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Naam </mat-header-cell>
+        <mat-cell *matCellDef="let light">{{light.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="state">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let light">{{light.state.on ? 'Ingeschakeld' : 'Uitgeschakeld'}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="changestate">
+        <mat-header-cell *matHeaderCellDef> In- / uitschakelen </mat-header-cell>
+        <mat-cell *matCellDef="let light"><button mat-button
+                (click)="lampService.toggleState(light)">{{light.state.on ? 'Uitschakelen' : 'Inschakelen'}}</button>
+        </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="beheer">
+        <mat-header-cell *matHeaderCellDef> Beheer </mat-header-cell>
+        <mat-cell *matCellDef="let light"><button [routerLink]="['/lamp/',lampService.lights.indexOf(light)+1]"
+                mat-button>Beheer</button></mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
