@@ -1,6 +1,8 @@
 <p class="mat-h1">Setup</p>
 <p class="mat-body">Om de applicatie te laten werken, moet er een API-gebruiker aangemaakt worden op uw Philips Hue
-    bridge.</p>
+    bridge. Omwille van browser mixed content policies is dit proces redelijk ingewikkeld, maar u hoeft het maar eenmaal uit te voeren.</p>
+<p class="mat-body">Ten eerste moet u het SSL-certificaat van uw lokale philips hue api vertrouwen. Ga hiervoor naar
+	<a href="{{lampService.hueApiUrl}}" target="_blank">{{lampService.hueApiUrl}}</a>, klik op 'Geavanceerd' en 'Toch doorgaan' en sluit het tabblad. Nu kan onze website communiceren met de hue api op je netwerk.</p>
 <p class="mat-body">U heeft 60 seconden de tijd om op de knop op uw philips hue bridge te drukken.</p>
 <p class="mat-body">Vervolgens dient u op onderstaande knop te drukken.</p>
 <button color="primary" mat-raised-button (click)="lampService.setup()">Verbinden met hue</button>

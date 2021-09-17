@@ -22,11 +22,11 @@ export class LampService {
         this.http.get('https://discovery.meethue.com')
             .subscribe(data => {
                 if (this.username) {
-                    this.hueApiUrl = `http://${data[0]['internalipaddress']}/api/${this.username}/lights`;
+                    this.hueApiUrl = `https://${data[0]['internalipaddress']}/api/${this.username}/lights`;
                     this.getLights();
                     this.snackbar.open('Succesvol verbonden')
                 } else {
-                    this.hueApiUrl = `http://${data[0]['internalipaddress']}/api`;
+                    this.hueApiUrl = `https://${data[0]['internalipaddress']}/api`;
                     this.http.post(this.hueApiUrl, { 'devicetype': 'lichtbeheer#app' }).subscribe(data => { });
                     this.router.navigate(['setup']);
                 }
@@ -122,4 +122,3 @@ export class LampService {
         ).subscribe(() => this.getLights());
     }
 }
-
