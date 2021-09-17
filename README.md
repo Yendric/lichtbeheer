@@ -4,7 +4,7 @@
 
 ### Info
 
-Source code van de LichtBeheer app, een Angular10-applicatie om Philips Hue lampen te bedienen
+Source code van de LichtBeheer app, een Angular12-applicatie om Philips Hue lampen te bedienen
 
 Dit is een oud project van mij en ik ben momenteel niet van plan om de code op een deftige manier te herschrijven.
 Je mag natuurlijk altijd contributies maken of issues reporten.
