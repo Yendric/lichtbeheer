@@ -12,5 +12,5 @@ Je mag natuurlijk altijd contributies maken of issues reporten.
 ### Hosted demo
 
 Bezoek het project hier:
-http://lichtbeheer.yendric.be/
+https://lichtbeheer.yendric.be/
 (Gelieve de instructies op de setup pagina goed te volgen, anders werkt te applicatie niet omwille van browser mixed content policies)
